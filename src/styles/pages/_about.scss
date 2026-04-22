@@ -1,0 +1,23 @@
+.about-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 10px 0 60px;
+}
+
+.about-collapses {
+  width: 100%;
+  max-width: 1023px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+@media (max-width: 768px) {
+  .about-collapses {
+    gap: 20px;
+  }
+}

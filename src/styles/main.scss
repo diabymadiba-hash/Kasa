@@ -1,0 +1,33 @@
+/* Global */
+@import "./components/card";
+@import "./components/banner";
+@import "./components/carousel";
+@import "./components/tag";
+@import "./components/host";
+@import "./components/rating";
+@import "./components/collapse";
+@import "./components/header";
+@import "./components/footer";
+
+
+
+
+/* Pages */
+@import "./pages/logement";
+@import "./pages/about";
+@import "./pages/home";
+@import "./pages/error";
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+.app-container {
+  max-width: 1126px;
+  width: 100%;
+  margin: 0 auto;     // ✔ centrage du contenu
+  padding: 0 20px;
+  background: white;  // ✔ fond blanc du contenu
+}

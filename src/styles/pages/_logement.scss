@@ -1,0 +1,89 @@
+.logement-page {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ---------------------- */
+/* HEADER (titre + host)  */
+/* ---------------------- */
+
+.logement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Bloc gauche */
+.logement-header .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logement-header h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+}
+
+.location {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Tags */
+.tags-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Bloc droit */
+.logement-header .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* ---------------------- */
+/* COLLAPSES              */
+/* ---------------------- */
+
+.collapses {
+  display: flex;
+  gap: 40px;
+}
+
+.collapses > div {
+  flex: 1;
+}
+
+/* ---------------------- */
+/* RESPONSIVE             */
+/* ---------------------- */
+
+@media (max-width: 768px) {
+  .logement-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .logement-header .right {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .collapses {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
