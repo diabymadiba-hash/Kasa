@@ -1,8 +1,21 @@
+.home {
+  width: 100%;
+  margin-bottom: 60px; 
+}
+
+.app-container {
+  max-width: 1126px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: white;
+}
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: 40px 0;
+  margin-top: 30px;
 }
 
 .card {
@@ -20,9 +33,41 @@
 
 .card h3 {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 15px;
+  left: 15px;
+
+  font-size: 19px;          
+  font-weight: 600;         
+  letter-spacing: 0.3px;    // plus élégant
+  line-height: 1.2;
+
+  width: 90%;
   color: white;
-  font-size: 18px;
-  width: 70%;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); // meilleure lisibilité
+}
+@media (max-width: 768px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .card {
+    height: 255px;              // 👉 hauteur mobile plus petite
+    border-radius: 10px;
+  }
+
+   .card h3 {
+    font-size: 25px;         // plus discret mais lisible
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    bottom: 10px;
+    left: 10px;
+    width: 80%;
+    line-height: 1.2;
+
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
 }

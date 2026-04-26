@@ -21,3 +21,18 @@
     width: 70%;
   }
 }
+@media (max-width: 768px) {
+  .card {
+    height: 255px;          // 👉 cartes plus petites en mobile
+    border-radius: 10px;
+  }
+
+  .card__title {
+    font-size: 1rem;        // 👉 texte légèrement plus petit
+    bottom: 10px;
+    left: 10px;
+    width: 80%;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+}

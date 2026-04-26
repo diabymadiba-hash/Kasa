@@ -15,9 +15,16 @@
   gap: 30px;
 }
 
-
 @media (max-width: 768px) {
+
+  .about-page {
+    gap: 20px;                 // moins d’espace en mobile
+    margin: 0 0 40px;          // marge plus compacte
+    padding: 0 10px;           // léger padding mobile
+  }
+
   .about-collapses {
-    gap: 20px;
+    gap: 20px;                 // collapses plus rapprochés
+    width: 100%;               // full width en mobile
   }
 }

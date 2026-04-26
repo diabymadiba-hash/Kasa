@@ -1,0 +1,36 @@
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.host-name {
+  color: #FF6060;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-align: right;
+  line-height: 1.3;
+
+  width: 70px;          // force le texte à se couper
+  white-space: normal;  //  autorise le retour à la ligne
+  word-break: break-word; // coupe si nécessaire
+}
+
+.host-picture {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;   // transforme en cercle
+  object-fit: cover;    // évite la déformation
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .host-name {
+    font-size: 14px;
+  }
+
+  .host-picture {
+    width: 40px;
+    height: 40px;
+  }
+}

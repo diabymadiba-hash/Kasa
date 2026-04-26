@@ -20,10 +20,11 @@
 .collapse__content {
   background-color: #F7F7F7;
   padding: 20px;
-  color: #ff0000;
+  color: #FF6060;        /* 👉 couleur correcte selon Figma */
   font-size: 16px;
   line-height: 1.5;
 }
+
 .arrow {
   width: 35px;
   transition: transform 0.3s ease;
@@ -31,4 +32,19 @@
 
 .arrow--open {
   transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+  .collapse__header {
+    padding: 12px 15px;
+    font-size: 16px;          // légèrement plus petit en mobile
+  }
+
+  .collapse__content {
+    padding: 15px;
+    font-size: 14px;          // texte plus petit en mobile
+  }
+
+  .arrow {
+    width: 25px;              // flèche plus petite en mobile
+  }
 }

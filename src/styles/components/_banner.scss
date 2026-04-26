@@ -19,8 +19,43 @@
 .banner__text {
   position: absolute;
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
   width: 80%;
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  .banner__text {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    font-size: 33px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.2;
+
+    width: 75%;                // 👉 contrôle la largeur
+    height: calc(1.2em * 2);   // 👉 hauteur EXACTE de 2 lignes
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     // 👉 limite à 2 lignes
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;          // 👉 coupe tout ce qui dépasse
+    white-space: normal;       // 👉 permet le retour à la ligne
+  }
 }

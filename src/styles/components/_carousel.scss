@@ -1,5 +1,5 @@
 /* ---------------------- */
-/* CAROUSEL               */
+/* CAROUSEL — DESKTOP     */
 /* ---------------------- */
 
 .carousel {
@@ -56,17 +56,25 @@
   font-weight: 500;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
+
+/* ---------------------- */
+/* RESPONSIVE — MOBILE    */
+/* ---------------------- */
+
 @media (max-width: 768px) {
   .carousel {
     height: 255px;
+    border-radius: 10px;        // radius mobile
   }
 
   .carousel-prev,
   .carousel-next {
     font-size: 30px;
+    padding: 0 5px;             // flèches plus proches du bord
   }
 
   .carousel-counter {
     font-size: 14px;
+    bottom: 10px;               // compteur légèrement plus bas
   }
 }

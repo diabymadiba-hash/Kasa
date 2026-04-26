@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+
 }
 
 /* Bloc gauche */
@@ -27,14 +27,17 @@
 }
 
 .logement-header h1 {
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 400;
   color: #FF6060;
 }
 
 .location {
-  font-size: 18px;
-  color: #333;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 13px;
+    margin-top: -26px;
+    font-weight: 500;
 }
 
 /* Tags */
@@ -65,25 +68,44 @@
   flex: 1;
 }
 
-/* ---------------------- */
-/* RESPONSIVE             */
-/* ---------------------- */
-
 @media (max-width: 768px) {
-  .logement-header {
-    flex-direction: column;
-    align-items: flex-start;
+
+  .logement-page {
+    padding: 10px;                 // marge mobile plus petite
     gap: 20px;
   }
 
+  .logement-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 0;
+  }
+
+  .logement-header h1 {
+    font-size: 24px;               // 👉 taille mobile fidèle à Figma
+    line-height: 1.2;
+  }
+
+  .location {
+    font-size: 16px;               // légèrement plus petit
+  }
+
+  .tags-container {
+    gap: 8px;
+  }
+
   .logement-header .right {
-    flex-direction: row-reverse;
-    justify-content: space-between;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;           // 👉 Host + Rating sur une ligne
+    flex-direction: row-reverse;
+    margin-top: 10px;
   }
 
   .collapses {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;                     // spacing mobile
   }
 }

@@ -1,0 +1,26 @@
+/* ---------------------- */
+/* TAG                    */
+/* ---------------------- */
+
+.tag {
+  background-color: #FF6060;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* ---------------------- */
+/* RESPONSIVE — MOBILE    */
+/* ---------------------- */
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 12px;
+    padding: 5px 15px;
+    border-radius: 8px;
+  }
+}
