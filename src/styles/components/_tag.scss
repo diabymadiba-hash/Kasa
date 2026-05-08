@@ -1,26 +1,22 @@
-/* ---------------------- */
-/* TAG                    */
-/* ---------------------- */
-
 .tag {
-  background-color: #FF6060;
-  color: white;
-  padding: 5px 20px;
-  border-radius: 10px;
-  font-size: 14px;
+  background-color: $tag-bg;
+  color: $tag-text-color;
+
+  padding: $tag-padding-desktop;
+  border-radius: $tag-radius-desktop;
+
+  font-size: $tag-font-size-desktop;
   font-weight: 500;
+
   display: inline-block;
   white-space: nowrap;
-}
 
-/* ---------------------- */
-/* RESPONSIVE — MOBILE    */
-/* ---------------------- */
-
-@media (max-width: 768px) {
-  .tag {
-    font-size: 12px;
-    padding: 5px 15px;
-    border-radius: 8px;
+  /* ----------------------------- */
+  /* RESPONSIVE                    */
+  /* ----------------------------- */
+  @media (max-width: $break-mobile) {
+    font-size: $tag-font-size-mobile;
+    padding: $tag-padding-mobile;
+    border-radius: $tag-radius-mobile;
   }
 }

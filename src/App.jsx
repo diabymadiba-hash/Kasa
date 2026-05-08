@@ -9,20 +9,19 @@ import Footer from "./components/Footer"
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
-        <Header />
+      <Header />
 
+      <main className="page-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/logement/:id" element={<Logement />} />
+          <Route path="/404" element={<Error404 />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
-      </div>
+      </main>
 
-      {/* 👉 Footer en dehors pour qu’il prenne 100% */}
       <Footer />
     </BrowserRouter>
   )
 }
-

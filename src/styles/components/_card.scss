@@ -1,38 +1,41 @@
 .card {
   position: relative;
   width: 100%;
-  height: 340px;
-  border-radius: 10px;
+  height: $card-height-desktop;
+  border-radius: $card-radius;
   overflow: hidden;
   cursor: pointer;
 
+  /* Image */
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
+  /* Titre */
   &__title {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    color: white;
-    font-size: 1.2rem;
+    color: $card-title-color;
+    font-size: $card-title-size-desktop;
     width: 70%;
   }
-}
-@media (max-width: 768px) {
-  .card {
-    height: 255px;          // 👉 cartes plus petites en mobile
-    border-radius: 10px;
-  }
 
-  .card__title {
-    font-size: 1rem;        // 👉 texte légèrement plus petit
-    bottom: 10px;
-    left: 10px;
-    width: 80%;
-    line-height: 1.2;
-    font-weight: 400;
+  /* ----------------------------- */
+  /* RESPONSIVE                    */
+  /* ----------------------------- */
+  @media (max-width: $break-mobile) {
+    height: $card-height-mobile;
+
+    &__title {
+      font-size: $card-title-size-mobile;
+      bottom: 10px;
+      left: 10px;
+      width: 80%;
+      line-height: 1.2;
+      font-weight: 400;
+    }
   }
 }

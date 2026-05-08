@@ -1,61 +1,67 @@
 .banner {
   position: relative;
   width: 100%;
-  height: 223px;
-  border-radius: 25px;
+  height: $banner-height-desktop;
+  border-radius: $banner-radius-desktop;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.banner__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(60%);
-}
-
-.banner__text {
-  position: absolute;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  width: 80%;
-}
-@media (max-width: 768px) {
-  .banner {
-    height: 140px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .banner img {
+  &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness($banner-overlay);
   }
 
-  .banner__text {
+  /* 👉 BLOC QUI CENTRE LE TEXTE EN DESKTOP */
+  &__content {
     position: absolute;
-    left: 20px;
-    bottom: 20px;
-    color: white;
-    font-size: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 👉 TEXTE */
+  &__text {
+    color: $banner-text-color;
+    font-size: $banner-text-size-desktop;
     font-weight: 500;
-    text-align: left;
     line-height: 1.2;
+    margin: 0;
+    padding: 0 20px;
+  }
 
-    width: 75%;                // 👉 contrôle la largeur
-    height: calc(1.2em * 2);   // 👉 hauteur EXACTE de 2 lignes
+  /* ----------------------------- */
+  /* RESPONSIVE                    */
+  /* ----------------------------- */
+  @media (max-width: $break-mobile) {
+    height: $banner-height-mobile;
+    border-radius: $banner-radius-mobile;
 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;     // 👉 limite à 2 lignes
-    -webkit-box-orient: vertical;
+    &__img {
+      filter: brightness($banner-overlay-mobile);
+    }
 
-    overflow: hidden;          // 👉 coupe tout ce qui dépasse
-    white-space: normal;       // 👉 permet le retour à la ligne
+    &__content {
+      top: auto;
+      bottom: 20px;
+      left: 20px;
+      transform: none;
+      text-align: left;
+      width: 75%;
+    }
+
+    &__text {
+      font-size: $banner-text-size-mobile;
+
+      /* Forcer exactement 2 lignes */
+      height: calc(1.2em * 2);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: normal;
+    }
   }
 }

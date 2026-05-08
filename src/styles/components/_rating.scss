@@ -1,23 +1,25 @@
 .rating {
   display: flex;
   gap: 5px;
-}
-
-.star {
-  font-size: 34px;
-  color: #E3E3E3; 
-  margin-top: 41px;
-}
-
-.star.filled {
-  color: #FF6060; /* rouge Kasa pour les étoiles remplies */
-}
-@media (max-width: 768px) {
-  .rating {
-    gap: 3px;              // étoiles plus serrées
-  }
 
   .star {
-    font-size: 23px;       // étoiles plus petites en mobile
+    font-size: $rating-star-size-desktop;
+    color: $rating-star-color-empty;
+    margin-top: 41px;
+
+    &.filled {
+      color: $rating-star-color-filled;
+    }
+  }
+
+  /* ----------------------------- */
+  /* RESPONSIVE                    */
+  /* ----------------------------- */
+  @media (max-width: $break-mobile) {
+    gap: 3px;
+
+    .star {
+      font-size: $rating-star-size-mobile;
+    }
   }
 }

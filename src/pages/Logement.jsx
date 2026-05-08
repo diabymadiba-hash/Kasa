@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Carousel from "../components/Carousel.jsx"
 import Tag from "../components/Tag"
@@ -8,19 +8,28 @@ import Collapse from "../components/Collapse"
 
 export default function Logement() {
   const { id } = useParams()
-  const [logement, setLogement] = useState(null)
+  const [logement, setLogement] = useState(undefined) // undefined = pas encore chargé
 
   useEffect(() => {
     fetch("http://localhost:8080/api/properties")
       .then(res => res.json())
       .then(data => {
         const found = data.find(item => item.id === id)
-        setLogement(found)
+        setLogement(found || null) // null = ID inconnu
       })
   }, [id])
 
-  if (!logement) return <p>Chargement...</p>
+  //  Pendant le chargement
+  if (logement === undefined) {
+    return <p>Chargement...</p>
+  }
 
+  //  Si ID inconnu → redirection 404
+  if (logement === null) {
+    return <Navigate to="/404" replace />
+  }
+
+  // Si logement trouvé → affichage normal
   return (
     <div className="logement-page">
 

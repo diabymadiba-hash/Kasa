@@ -1,50 +1,59 @@
 .collapse {
   width: 100%;
-  border-radius: 5px;
+  border-radius: $collapse-radius;
   overflow: hidden;
-}
 
-/* HEADER (fermé ou ouvert) */
-.collapse__header {
-  background-color: #FF6060;
-  color: white;
-  padding: 15px 20px;
-  font-size: 18px;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
+  /* HEADER */
+  &__header {
+    background-color: $collapse-header-bg;
+    color: $collapse-header-color;
 
-.collapse__content {
-  background-color: #F7F7F7;
-  padding: 20px;
-  color: #FF6060;        /* 👉 couleur correcte selon Figma */
-  font-size: 16px;
-  line-height: 1.5;
-}
+    font-size: 24px;      // ✔ plus lisible
+    font-weight: 600;     // ✔ plus affirmé
+    padding: 10px 24px;   // ✔ plus d’air
 
-.arrow {
-  width: 35px;
-  transition: transform 0.3s ease;
-}
-
-.arrow--open {
-  transform: rotate(180deg);
-}
-@media (max-width: 768px) {
-  .collapse__header {
-    padding: 12px 15px;
-    font-size: 16px;          // légèrement plus petit en mobile
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
   }
 
-  .collapse__content {
-    padding: 15px;
-    font-size: 14px;          // texte plus petit en mobile
+  /* CONTENT */
+  &__content {
+    background-color: $collapse-content-bg;
+
+    font-size: 16px;      // ✔ lisible
+    line-height: 1.6;     // ✔ aéré
+    padding: 22px 24px;   // ✔ plus confortable
+    color: #d94c4c;       // ✔ meilleur contraste
   }
 
+  /* ARROW */
   .arrow {
-    width: 25px;              // flèche plus petite en mobile
+    width: $collapse-arrow-size-desktop;
+    transition: transform 0.3s ease;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  /* ----------------------------- */
+  /* RESPONSIVE                    */
+  /* ----------------------------- */
+  @media (max-width: $break-mobile) {
+    &__header {
+      padding: 12px 15px;
+      font-size: $collapse-header-font-size-mobile;
+    }
+
+    &__content {
+      padding: 15px;
+      font-size: $collapse-content-font-size-mobile;
+    }
+
+    .arrow {
+      width: $collapse-arrow-size-mobile;
+    }
   }
 }

@@ -1,111 +1,123 @@
+/* ----------------------------- */
+/* PAGE LOGEMENT — GLOBAL        */
+/* ----------------------------- */
+
 .logement-page {
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: $logement-gap-desktop;
+  padding: 40px;              /* marge desktop */
+  padding-bottom: 80px;       /* espace avant footer */
 }
 
-/* ---------------------- */
-/* HEADER (titre + host)  */
-/* ---------------------- */
+
+/* ----------------------------- */
+/* HEADER LOGEMENT (titre, tags) */
+/* ----------------------------- */
 
 .logement-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: $logement-gap-desktop;
+  margin-bottom: $logement-gap-desktop;
 
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      font-size: $logement-title-size-desktop;
+      font-weight: 400;
+      color: $color-primary;
+    }
+
+    .location {
+      font-size: $logement-location-size-desktop;
+      color: $color-dark-2;
+      font-weight: 500;
+    }
+
+    .tags-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
 }
 
-/* Bloc gauche */
-.logement-header .left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
-.logement-header h1 {
-  font-size: 30px;
-  font-weight: 400;
-  color: #FF6060;
-}
-
-.location {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 13px;
-    margin-top: -26px;
-    font-weight: 500;
-}
-
-/* Tags */
-.tags-container {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* Bloc droit */
-.logement-header .right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-/* ---------------------- */
-/* COLLAPSES              */
-/* ---------------------- */
+/* ----------------------------- */
+/* COLLAPSES                     */
+/* ----------------------------- */
 
 .collapses {
   display: flex;
-  gap: 40px;
+  gap: $collapses-gap-desktop;
+
+  > div {
+    flex: 1;
+  }
 }
 
-.collapses > div {
-  flex: 1;
-}
+
+/* ----------------------------- */
+/* VERSION MOBILE                */
+/* ----------------------------- */
 
 @media (max-width: 768px) {
 
+  /* PAGE */
   .logement-page {
-    padding: 10px;                 // marge mobile plus petite
+    padding: 20px;            /* marge mobile */
+    padding-bottom: 80px;     /* espace avant footer */
     gap: 20px;
   }
 
+  /* HEADER */
   .logement-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .left {
+      h1 {
+        font-size: $logement-title-size-mobile;
+        line-height: 1.2;
+      }
+
+      .location {
+        font-size: $logement-location-size-mobile;
+      }
+
+      .tags-container {
+        gap: 8px;
+      }
+    }
+
+    .right {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      margin-top: 10px;
+    }
   }
 
-  .logement-header h1 {
-    font-size: 24px;               // 👉 taille mobile fidèle à Figma
-    line-height: 1.2;
-  }
-
-  .location {
-    font-size: 16px;               // légèrement plus petit
-  }
-
-  .tags-container {
-    gap: 8px;
-  }
-
-  .logement-header .right {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;           // 👉 Host + Rating sur une ligne
-    flex-direction: row-reverse;
-    margin-top: 10px;
-  }
-
+  /* COLLAPSES */
   .collapses {
     flex-direction: column;
-    gap: 15px;                     // spacing mobile
+    gap: $collapses-gap-mobile;
   }
 }

@@ -1,0 +1,195 @@
+/* --------------------------------------------- */
+/* COULEURS                                      */
+/* --------------------------------------------- */
+
+$color-primary: #FF6060;
+$color-dark: #000000;
+$color-light: #FFFFFF;
+$color-grey: #333;
+$color-star-empty: #E3E3E3;
+$color-dark-2: #333;
+
+
+/* --------------------------------------------- */
+/* BREAKPOINTS                                   */
+/* --------------------------------------------- */
+
+$break-mobile: 768px;
+
+/* --------------------------------------------- */
+/* RADIUS                                        */
+/* --------------------------------------------- */
+
+$radius-small: 8px;
+$radius-medium: 10px;
+$radius-large: 20px;
+
+/* --------------------------------------------- */
+/* LAYOUT / STRUCTURE                            */
+/* --------------------------------------------- */
+
+$container-max-width: 100%;
+$container-padding: 20px;
+
+$home-margin-bottom: 60px;
+
+$logement-max-width: 1240px;
+$logement-padding-desktop: 20px;
+$logement-padding-mobile: 10px;
+$logement-gap-desktop: 30px;
+$logement-gap-mobile: 20px;
+
+/* --------------------------------------------- */
+/* TYPOGRAPHIE                                   */
+/* --------------------------------------------- */
+
+/* Logement */
+$logement-title-size-desktop: 30px;
+$logement-title-size-mobile: 24px;
+
+$logement-location-size-desktop: 1.1em;
+$logement-location-size-mobile: 16px;
+
+/* CARD */
+$card-height-desktop: 340px;
+$card-height-mobile: 255px;
+
+$card-radius: 10px;
+
+$card-title-color: $color-light;
+
+$card-title-size-desktop: 19px;
+$card-title-size-mobile: 25px;
+
+$card-overlay-opacity: 0.6;
+$card-overlay-color: #000000;
+
+
+/* Tags */
+$tag-font-size-desktop: 14px;
+$tag-font-size-mobile: 12px;
+
+/* Rating */
+$rating-star-size-desktop: 34px;
+$rating-star-size-mobile: 23px;
+
+/* Collapse */
+$collapse-header-font-size-desktop: 18px;
+$collapse-header-font-size-mobile: 16px;
+
+$collapse-content-font-size-desktop: 16px;
+$collapse-content-font-size-mobile: 14px;
+
+/* Banner */
+$banner-text-size-desktop: 1.5rem;
+$banner-text-size-mobile: 33px;
+
+/* --------------------------------------------- */
+/* SPACING                                       */
+/* --------------------------------------------- */
+
+$cards-gap-desktop: 30px;
+$cards-gap-mobile: 20px;
+
+$collapses-gap-desktop: 40px;
+$collapses-gap-mobile: 15px;
+
+/* --------------------------------------------- */
+/* COMPONENTS                                    */
+/* --------------------------------------------- */
+
+/* TAG */
+$tag-bg: $color-primary;
+$tag-text-color: $color-light;
+$tag-padding-desktop: 5px 20px;
+$tag-padding-mobile: 5px 15px;
+$tag-radius-desktop: 10px;
+$tag-radius-mobile: 8px;
+
+/* RATING */
+$rating-star-color-filled: $color-primary;
+$rating-star-color-empty: $color-star-empty;
+
+/* HOST */
+$host-name-color: $color-primary;
+$host-name-size-desktop: 1.1em;
+$host-name-size-mobile: 14px;
+$host-picture-size-desktop: 4rem;
+$host-picture-size-mobile: 40px;
+
+/* FOOTER */
+$footer-bg: $color-dark;
+$footer-text-color: $color-light;
+$footer-height-desktop: 209px;
+$footer-height-mobile: 150px;
+$footer-gap-desktop: 20px;
+$footer-gap-mobile: 10px;
+$footer-logo-size-mobile: 100px;
+$footer-text-size-desktop: 24px;
+$footer-text-size-mobile: 12px;
+
+
+/* HEADER */
+$header-padding-desktop: 34px 40px;
+$header-padding-mobile: 36px 20px;
+$nav-gap-desktop: 40px;
+$nav-gap-mobile: 36px;
+$nav-font-size: 18px;
+$nav-color: $color-dark;
+/* HEADER — LOGO */
+$logo-height-desktop: 68px;
+$logo-height-mobile: 45px;
+
+
+/* BANNER */
+$banner-height-desktop: 223px;
+$banner-height-mobile: 140px;
+
+$banner-radius-desktop: 25px;
+$banner-radius-mobile: 10px;
+
+$banner-overlay: 60%;
+$banner-overlay-mobile: 70%;
+
+$banner-text-color: $color-light;
+
+/* COLLAPSE */
+$collapse-radius: 5px;
+
+$collapse-header-bg: $color-primary;
+$collapse-header-color: $color-light;
+
+$collapse-content-bg: #F7F7F7;
+$collapse-content-color: $color-primary;
+
+$collapse-arrow-size-desktop: 20px;
+$collapse-arrow-size-mobile: 14px;
+
+/* CAROUSEL */
+$carousel-height-desktop: 415px;
+$carousel-height-mobile: 255px;
+
+$carousel-radius-desktop: 25px;
+$carousel-radius-mobile: 10px;
+
+$carousel-arrow-size-desktop: 60px;
+$carousel-arrow-size-mobile: 30px;
+
+$carousel-arrow-padding-desktop: 0 15px;
+$carousel-arrow-padding-mobile: 0 5px;
+
+$carousel-text-color: $color-light;
+
+$carousel-counter-size-desktop: 18px;
+$carousel-counter-size-mobile: 14px;
+
+
+/* ABOUT PAGE */
+$about-gap-desktop: 40px;
+$about-gap-mobile: 20px;
+
+$about-margin-desktop: 10px 0 60px;
+$about-margin-mobile: 0 0 40px;
+
+$about-collapses-gap-desktop: 30px;
+$about-collapses-gap-mobile: 20px;

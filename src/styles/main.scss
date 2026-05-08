@@ -1,20 +1,38 @@
-/* ---------------------- */
-/* RESET GLOBAL           */
-/* ---------------------- */
-
+/* RESET GLOBAL */
 html, body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.page-container {
+  width: 100%;
+  flex: 1;
+  padding: 0 80px;      /* ✔ marge latérale desktop */
+  padding-bottom: 80px; 
+  display: flex;
+  flex-direction: column;
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
+
+@media (max-width: 768px) {
+.page-container {
+    padding: 0 20px;      /* marge mobile */
+    padding-bottom: 60px; /* espace avant footer */
+  }
+}
+
+/* ---------------------- */
+/* VARIABLES              */
+/* ---------------------- */
+@import "./variables";
 
 /* ---------------------- */
 /* COMPONENTS             */
 /* ---------------------- */
-
 @import "./components/header";
 @import "./components/footer";
 @import "./components/banner";
@@ -28,9 +46,7 @@ html, body {
 /* ---------------------- */
 /* PAGES                  */
 /* ---------------------- */
-
 @import "./pages/home";
 @import "./pages/logement";
 @import "./pages/about";
 @import "./pages/error";
-
