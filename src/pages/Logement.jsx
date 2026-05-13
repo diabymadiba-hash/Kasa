@@ -1,5 +1,5 @@
-import { useParams, Navigate } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useParams, Navigate } from "react-router-dom"//useParams pour récupérer l'ID de l'URL
+import { useEffect, useState } from "react"/*useState pour stocker les données du logement, useEffect pour charger les données au chargement du composant*/
 import Carousel from "../components/Carousel.jsx"
 import Tag from "../components/Tag"
 import Host from "../components/Host"
@@ -7,17 +7,17 @@ import Rating from "../components/Rating"
 import Collapse from "../components/Collapse"
 
 export default function Logement() {
-  const { id } = useParams()
+  const { id } = useParams()/*Récupère l'ID du logement à partir de l'URL*/
   const [logement, setLogement] = useState(undefined) // undefined = pas encore chargé
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/properties")
+    fetch("http://localhost:8080/api/properties") 
       .then(res => res.json())
-      .then(data => {
+      .then(data => {/*chercher le logement correspondant*/
         const found = data.find(item => item.id === id)
         setLogement(found || null) // null = ID inconnu
       })
-  }, [id])
+  }, [id])/*signifie : relance le fetch si l’ID change*/
 
   //  Pendant le chargement
   if (logement === undefined) {

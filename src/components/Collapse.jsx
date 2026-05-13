@@ -1,9 +1,9 @@
-import { useState } from "react"
-import arrow from "../assets/arrow.png"
+import { useState } from "react"/*importation de useState pour gérer l'état du composant*/
+import arrow from "../assets/arrow.png"/*importation de l'image de la flèche pour le toggle*/
 
 
 export default function Collapse({ title, children }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)/*état pour savoir si le collapse est ouvert ou fermé*/
 
   return (
     <div className="collapse">
@@ -12,7 +12,7 @@ export default function Collapse({ title, children }) {
       <div className="collapse__header" onClick={() => setOpen(!open)}>
         <span>{title}</span>
 
-        {/* 👉 LA FLÈCHE DOIT ÊTRE ICI */}
+        {/*  LA FLÈCHE DOIT ÊTRE ICI */}
         <img
           src={arrow}
           alt="toggle"

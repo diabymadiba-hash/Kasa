@@ -1,33 +1,33 @@
-import { useState } from "react"
+import { useState } from "react"/*importation de useState pour gérer l'état du composant*/
 
 export default function Carousel({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
+      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1/*boucle infinie*/
     )
   }
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
+      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1/*boucle infinie*/
     )
   }
 
   if (!pictures || pictures.length === 0) {
-    return null
+    return null /*si aucune image on afiche rien*/
   }
 
   return (
     <div className="carousel">
       <img
-        src={pictures[currentIndex]}
+        src={pictures[currentIndex]}/*affiche l image correspondant*/
         alt={`Slide ${currentIndex + 1}`}
         className="carousel-image"
       />
 
-      {pictures.length > 1 && (
+      {pictures.length > 1 && (/*affichage conditionnel(flèche)*/
         <>
           <button className="carousel-prev" onClick={prevSlide}>
             ❮

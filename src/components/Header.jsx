@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"/*il ajoute automatiquement une classe active quand la page correspond à l’URL.*/
 
 export default function Header() {
   return (

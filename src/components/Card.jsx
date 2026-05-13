@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";/*crée les routes*/
 
 export default function Card({ id, title, cover }) {
   return (
