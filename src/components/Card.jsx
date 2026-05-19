@@ -8,3 +8,4 @@ export default function Card({ id, title, cover }) {
     </Link>
   );
 }
+/* link pour afficher la carte correspondant*/

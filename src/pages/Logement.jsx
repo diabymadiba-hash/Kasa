@@ -21,7 +21,8 @@ export default function Logement() {
 
   //  Pendant le chargement
   if (logement === undefined) {
-    return <p>Chargement...</p>
+    return <p>Chargement...</p>/* État de chargement : les données ne sont pas encore disponibles*/
+
   }
 
   //  Si ID inconnu → redirection 404

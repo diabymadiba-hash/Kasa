@@ -1,17 +1,17 @@
 import { useState } from "react"/*importation de useState pour gérer l'état du composant*/
 
 export default function Carousel({ pictures }) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0)/*stock l'index de l'image*/
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1/*boucle infinie*/
+      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1/*Passe a l'image suivante ,boucle infinie*/
     )
   }
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1/*boucle infinie*/
+      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1/*Passe à l'image précédent boucle infinie inverse*/
     )
   }
 

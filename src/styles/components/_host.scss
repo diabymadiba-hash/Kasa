@@ -14,6 +14,9 @@
     width: 70px; 
     white-space: normal;
     word-break: break-word;
+    display: block;        // Ajout essentiel pour forcer la coupure
+     max-height: calc(1.3em * 2);   
+    overflow: hidden;      
   }
 
   /* Photo de l'hôte */

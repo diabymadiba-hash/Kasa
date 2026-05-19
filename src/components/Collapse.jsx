@@ -8,11 +8,11 @@ export default function Collapse({ title, children }) {
   return (
     <div className="collapse">
       
-      {/* HEADER — on clique ici */}
+      {/*Toggle : inverse l’état open (ouvre/ferme le collapse*/}
       <div className="collapse__header" onClick={() => setOpen(!open)}>
         <span>{title}</span>
 
-        {/*  LA FLÈCHE DOIT ÊTRE ICI */}
+        {/*la flèche change en fonction de l'état pour faire la rotation */}
         <img
           src={arrow}
           alt="toggle"
